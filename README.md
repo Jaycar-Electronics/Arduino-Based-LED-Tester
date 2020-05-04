@@ -10,25 +10,26 @@ The other good thing about this project is that apart from the custom shield we�
 
 ## Bill of Materials
 
-|Qty| Code | Description |
-|---|---|---|
-|1 | [XC4410](http://jaycar.com.au/p/XC4410) | UNO Board
-|1 | [XC4482](http://jaycar.com.au/p/XC4482) | prototyping shield
-|1 | [XC4454](http://jaycar.com.au/p/XC4454) | LCD controller
-|1 | [RR0538](http://jaycar.com.au/p/RR0538) | 39R 1/2W Resistor
-|1 | [RR0524](http://jaycar.com.au/p/RR0524) | 10R 1/2W Resistor
-|1 | [RE6194](http://jaycar.com.au/p/RE6194) | 470u 16V electrolytic capacitor
+| Qty | Code                                    | Description                     |
+| --- | --------------------------------------- | ------------------------------- |
+| 1   | [XC4410](http://jaycar.com.au/p/XC4410) | UNO Board                       |
+| 1   | [XC4482](http://jaycar.com.au/p/XC4482) | prototyping shield              |
+| 1   | [XC4454](http://jaycar.com.au/p/XC4454) | LCD controller                  |
+| 1   | [RR0538](http://jaycar.com.au/p/RR0538) | 39R 1/2W Resistor               |
+| 1   | [RR0524](http://jaycar.com.au/p/RR0524) | 10R 1/2W Resistor               |
+| 1   | [RE6194](http://jaycar.com.au/p/RE6194) | 470u 16V electrolytic capacitor |
 
 I’ve used a couple of jumper wires as test leads, but any old wire should do. You could even use test leads with sockets in the end (like WC6028) and push the legs of the LED’s in.
 
 ## Connection Table
-|Connections | | |
-| --- | --- | --- |
-|470uF capacitor | A2 | GND |
-| 39R Resistor | A2 | D3 |
-| 10R Resistor | A2 | A3 |
-|Positive test Lead | D3 | |
-|Negative Test Lead | GND | |
+
+| Connections        |     |     |
+| ------------------ | --- | --- |
+| 470uF capacitor    | A2  | GND |
+| 39R Resistor       | A2  | D3  |
+| 10R Resistor       | A2  | A3  |
+| Positive test Lead | D3  |     |
+| Negative Test Lead | GND |     |
 
 ## Assembly
 
@@ -45,11 +46,13 @@ Note that I’ve used the GND connection on the ICSP header for the test lead. T
 When this is assembled, connect the Uno to the bottom of the new shield and the LCD shield to the top.
 
 ## Programming
+
 If you haven’t already, download and install the Arduino IDE from https://www.arduino.cc/en/Main/Software, and check that the drivers are installed for the Uno board.
 
 Open the sketch file in the Arduino IDE and upload it to the Uno, making sure Uno is selected from Tools>Board, and that the correct serial port for the Uno is selected from Tools>Port.
 
-## Use 
+## Use
+
 After this, the Arduino LED Tester should spring into life. With no LED attached, it will not show a resistor value. Connect an LED between the test leads and the LED will light up, and the display will show its characteristics operating from a 14V supply at 10mA. The target voltage can be changed between 1V and 99V with the up and down buttons on the display, and the left and right buttons change the target current (up to 20mA).
 
 ## Future Improvements
